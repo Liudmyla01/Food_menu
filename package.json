@@ -2,11 +2,11 @@
   "name": "food_dist",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "nodeServer.js",
+ 
   "scripts": {
-    "serve": "nodemon index.js",
-    "start": "node index.js",
+    "serve": "nodemon nodeServer.js",
+    "start": "node nodeServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +17,8 @@
     "json-server": "^0.16.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0"
   }
 }
