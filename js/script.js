@@ -8,6 +8,10 @@ import slider from './modules/slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
+
+
+
+    
     const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 2000)
 
     tabs();

@@ -503,9 +503,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function timer(id, deadline){
-//timer
-
-
 
 function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date),
@@ -545,9 +542,13 @@ function setClock(selector, endtime) {
         hours.innerHTML = getZero(t.hours);
         minutes.innerHTML = getZero(t.minutes);
         seconds.innerHTML = getZero(t.seconds);
-
+        
         if (t.total <= 0) {
             clearInterval(timeInterval);
+            days.innerHTML = '00';
+            hours.innerHTML = '00';
+            minutes.innerHTML = '00';
+            seconds.innerHTML = '00';
         }
     }
 }
@@ -673,6 +674,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
+
+
+
+    
     const modalTimerId = setTimeout(() => (0,_modules_madal__WEBPACK_IMPORTED_MODULE_1__.openModal)('.modal', modalTimerId), 2000)
 
     ;(0,_modules_tabs__WEBPACK_IMPORTED_MODULE_0__.default)();

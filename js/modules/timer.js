@@ -1,7 +1,4 @@
 function timer(id, deadline){
-//timer
-
-
 
 function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date),
@@ -41,9 +38,13 @@ function setClock(selector, endtime) {
         hours.innerHTML = getZero(t.hours);
         minutes.innerHTML = getZero(t.minutes);
         seconds.innerHTML = getZero(t.seconds);
-
+        
         if (t.total <= 0) {
             clearInterval(timeInterval);
+            days.innerHTML = '00';
+            hours.innerHTML = '00';
+            minutes.innerHTML = '00';
+            seconds.innerHTML = '00';
         }
     }
 }
